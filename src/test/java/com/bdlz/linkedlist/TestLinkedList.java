@@ -45,4 +45,17 @@ public class TestLinkedList {
 				&& LinkedListDs.tail.equals(thirdNode);
 		Assert.assertTrue(result);
 	}
+	@Test
+	public void whenInsertedToLinkedListShouldBeAddedInBetweenElements() {
+		ImplementNode<Integer> firstNode = new ImplementNode<Integer>(56);
+		ImplementNode<Integer> secondNode = new ImplementNode<Integer>(30);
+		ImplementNode<Integer> thirdNode = new ImplementNode<Integer>(70);
+		LinkedListDs lst = new LinkedListDs();
+		lst.add(firstNode);
+		lst.append(thirdNode);
+		lst.insert(firstNode, thirdNode);
+		boolean result = LinkedListDs.head.equals(firstNode) && LinkedListDs.head.getNext().equals(secondNode)
+				&& LinkedListDs.tail.equals(thirdNode);
+		Assert.assertTrue(result);
+	}
 }

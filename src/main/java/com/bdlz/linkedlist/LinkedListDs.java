@@ -31,5 +31,9 @@ public class LinkedListDs<K> {
 			this.tail = myNode;
 		}
 	}
-	
+	public void insert(InterfaceNode myNode, InterfaceNode newNode) {
+		InterfaceNode tempNode = myNode.getNext();
+		myNode.setNext(newNode);
+		newNode.setNext(tempNode);
+	}
 }
