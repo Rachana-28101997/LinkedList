@@ -36,4 +36,9 @@ public class LinkedListDs<K> {
 		myNode.setNext(newNode);
 		newNode.setNext(tempNode);
 	}
+	public InterfaceNode pop() {
+		InterfaceNode tempNode = this.head;
+		this.head = head.getNext();
+		return tempNode;
+	}
 }
