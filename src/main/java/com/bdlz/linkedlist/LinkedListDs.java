@@ -19,4 +19,17 @@ public class LinkedListDs<K> {
 			this.head.setNext(tempNode);
 		}
 	}
+
+	public void append(InterfaceNode<K> myNode) {
+		if(this.head == null) {
+			this.head = myNode;
+		}
+		if(this.tail == null) {
+			this.tail = myNode;
+		}else {
+			this.tail.setNext(myNode);
+			this.tail = myNode;
+		}
+	}
+	
 }
