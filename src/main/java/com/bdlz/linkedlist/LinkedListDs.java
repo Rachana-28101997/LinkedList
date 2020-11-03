@@ -41,4 +41,13 @@ public class LinkedListDs<K> {
 		this.head = head.getNext();
 		return tempNode;
 	}
+	public InterfaceNode popLast() {
+		InterfaceNode tempNode = head;
+		while(!tempNode.getNext().equals(tail)) {
+			tempNode = tempNode.getNext();
+		}
+		this.tail = tempNode;
+		tempNode = tempNode.getNext();
+		return tempNode;
+	}
 }
